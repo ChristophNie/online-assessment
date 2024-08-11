@@ -332,4 +332,4 @@ def insert_Results(user_id, values, patternValues, keyValues):
             db.commit()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

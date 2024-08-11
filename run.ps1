@@ -1,8 +1,9 @@
-if ($IsMac) {
+if ($IsMacOS) {
 	brew install python
-	pip3 install flask
+	# do not use virtual environments
+	pip3 install flask --break-system-packages
 } elseif ($IsLinux) {
-	apt install python
+	apt install python # you can do it yourself if you use linux
 	pip install flask
 } else {
 	winget install -e --id Python.Python.3.11
@@ -12,7 +13,7 @@ if ($IsMac) {
 npm install -D tailwindcss
 npx tailwindcss -i ./input.css -o ./static/output.css --minify
 
-if ($IsMac) {
+if ($IsMacOS) {
 	python3 app.py
 } else {
 	python app.py
